@@ -41,7 +41,7 @@ export default function App() {
                 </NavbarBrand>
                 <NavbarItem>
                     <Link color="foreground" href="#">
-                        Features
+                        Test
                     </Link>
                 </NavbarItem>
                 <NavbarItem isActive>
