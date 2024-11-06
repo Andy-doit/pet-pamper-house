@@ -2,21 +2,12 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { useEffect, useState } from "react";
-import axios from "axios";
 import { Button } from "@nextui-org/react";
 import { FaArrowAltCircleRight } from "react-icons/fa";
 
 
 const MainSlider = () => {
 
-    const NextArrow = (props: any) => {
-        return (
-            <Button isIconOnly color="danger" onClick={props.onClick}>
-                <FaArrowAltCircleRight />
-            </Button>
-        )
-    }
     const settings = {
         dots: true,
         className: "center",
@@ -24,8 +15,6 @@ const MainSlider = () => {
         infinite: true,
         centerPadding: "60px",
         slidesToShow: 4,
-        NextArrow: <NextArrow />,
-        Previ: <NextArrow />,
         speed: 500
 
     };
