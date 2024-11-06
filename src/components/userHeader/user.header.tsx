@@ -58,7 +58,7 @@ export default function UserHeader() {
                 {menuItems.map((item, index) =>
                 (
                     <NavbarItem key={`${item}-${index}`}>
-                        <Link color="foreground" href={item.href}>
+                        <Link color="foreground" className="font-semibold hover:text-orange-600" href={item.href}>
                             {item.label}
                         </Link>
                     </NavbarItem>
@@ -94,10 +94,12 @@ export default function UserHeader() {
                 ) : (
                     <>
                         <NavbarItem className="hidden lg:flex">
-                            <Link href="#" >Đăng ký</Link>
+                            <Button size="sm" variant="light" as={Link} href="#"  >
+                                Đăng ký
+                            </Button>
                         </NavbarItem>
                         <NavbarItem>
-                            <Button as={Link} href="#" className="bg-gradient-to-tr from-pink-500 to-yellow-500 text-white shadow-lg" variant="flat">
+                            <Button size="sm" as={Link} href="#" className="bg-gradient-to-tr from-pink-500 to-yellow-500 text-white shadow-lg" variant="flat">
                                 Đăng nhập
                             </Button>
                         </NavbarItem>
