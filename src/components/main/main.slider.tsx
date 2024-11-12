@@ -2,7 +2,8 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
+import { ServiceCards } from "../card/data"
+import CardService from "../card/cart.service";
 
 const MainSlider = () => {
 
@@ -20,34 +21,9 @@ const MainSlider = () => {
         <div className="slider-container">
 
             <Slider {...settings}>
-                <div>
-                    <h3></h3>
-                </div>
-                <div>
-                    <h3>1</h3>
-                </div>
-                <div>
-                    <h3>1</h3>
-                </div>
-                <div>
-                    <h3>1</h3>
-                </div>
-
-                <div>
-                    <h3>2</h3>
-                </div>
-                <div>
-                    <h3>3</h3>
-                </div>
-                <div>
-                    <h3>4</h3>
-                </div>
-                <div>
-                    <h3>5</h3>
-                </div>
-                <div>
-                    <h3>6</h3>
-                </div>
+                {ServiceCards.map((service, index) => (
+                    <CardService key={index} {...service} />
+                ))}
             </Slider>
         </div>
     )
