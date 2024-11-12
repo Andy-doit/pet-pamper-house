@@ -1,5 +1,5 @@
 'use client'
-import { Card, CardHeader, CardBody, CardFooter, Image, Button } from "@nextui-org/react";
+import { Card, Image } from "@nextui-org/react";
 
 const CardGroup = () => {
     return (

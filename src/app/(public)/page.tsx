@@ -1,4 +1,4 @@
-import CardService from '@/components/card/cart.service';
+
 import CardGroup from '@/components/main/card.group';
 import MainSlider from '@/components/main/main.slider';
 import SortService from '@/components/sortService/page';

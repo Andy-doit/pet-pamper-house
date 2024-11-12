@@ -1,7 +1,5 @@
 'use client'
 import { Card, CardHeader, CardBody, Image } from "@nextui-org/react";
-import Rate from 'rc-rate';
-import { ServiceCards } from "./data";
 interface IService {
     ServiceName: string;
     company: string;
