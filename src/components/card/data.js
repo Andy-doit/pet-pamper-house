@@ -42,3 +42,65 @@ export const ServiceCards = [
         price: "100",
     },
 ];
+export const Shop = [
+    {
+        company: "Andy Spa",
+        address: "Khu 2 Hoàng Dương, Thanh Ba, Phú Thọ",
+        rate: "6",
+        order: "190",
+    },
+    {
+        company: "Luxury Nails",
+        address: "123 Lê Duẩn, Đống Đa, Hà Nội",
+        rate: "8",
+        order: "230",
+    },
+    {
+        company: "The Beauty House",
+        address: "456 Phan Đình Phùng, Ba Đình, Hà Nội",
+        rate: "9",
+        order: "320",
+    },
+    {
+        company: "Royal Spa",
+        address: "789 Nguyễn Trãi, Thanh Xuân, Hà Nội",
+        rate: "7",
+        order: "150",
+    },
+    {
+        company: "Zen Spa",
+        address: "321 Trần Hưng Đạo, Quận 1, Hồ Chí Minh",
+        rate: "8.5",
+        order: "400",
+    },
+    {
+        company: "Serenity Salon",
+        address: "654 Nguyễn Thị Minh Khai, Quận 3, Hồ Chí Minh",
+        rate: "7.5",
+        order: "210",
+    },
+    {
+        company: "Glow Beauty",
+        address: "12 Hai Bà Trưng, Quận 1, Hồ Chí Minh",
+        rate: "9.2",
+        order: "270",
+    },
+    {
+        company: "Prestige Spa",
+        address: "88 Nguyễn Huệ, Quận 1, Hồ Chí Minh",
+        rate: "8",
+        order: "180",
+    },
+    {
+        company: "Tranquility Spa",
+        address: "17 Phạm Văn Đồng, Từ Liêm, Hà Nội",
+        rate: "7.8",
+        order: "150",
+    },
+    {
+        company: "Euphoria Beauty",
+        address: "45 Hoàng Văn Thụ, Phú Nhuận, Hồ Chí Minh",
+        rate: "9",
+        order: "340",
+    },
+];

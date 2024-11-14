@@ -1,6 +1,7 @@
 
 import CardGroup from '@/components/main/card.group';
 import MainSlider from '@/components/main/main.slider';
+import ShopSlider from '@/components/main/slider.shop';
 import SortService from '@/components/sortService/page';
 import { Button } from '@nextui-org/react';
 import React from 'react';
@@ -57,9 +58,21 @@ const HomePage = () => {
             <div className="mt-6">
                 <SortService />
             </div>
-            <div className="mt-4">
+            <div className="my-4">
                 <MainSlider />
             </div>
+            <div className="text-center mt-8">
+                <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold">
+                    Shop nổi bật
+                </p>
+            </div>
+            <div className="mt-6">
+                <SortService />
+            </div>
+            <div className="my-4">
+                <ShopSlider />
+            </div>
+
         </div>
     );
 };
