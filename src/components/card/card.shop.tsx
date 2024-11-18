@@ -8,11 +8,12 @@ interface IShop {
   address: string;
   rate: string;
   order: string;
+  index?: number;
 }
 
 export default function CardShop(props: IShop) {
   return (
-    <Card className="max-w-[320px] w-full" key={index}>
+    <Card className="max-w-[320px] w-full" key={props.index}>
       <Divider />
       <CardHeader className="justify-between">
         <div className="flex flex-col sm:flex-row gap-3">

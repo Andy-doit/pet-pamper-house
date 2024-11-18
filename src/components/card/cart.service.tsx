@@ -8,13 +8,14 @@ interface IService {
     address: string;
     rate: string;
     price: string;
+    index?: number;
 }
 
 export default function CardService(props: IService) {
     return (
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5">
             <Card className="py-4 mt-4 w-full sm:w-[250px] md:w-[300px]">
-                <CardBody className="overflow-visible py-1">
+                <CardBody className="overflow-visible py-1" key={props.index}>
                     <Image
                         alt="Card background"
                         className="object-cover rounded-xl"
