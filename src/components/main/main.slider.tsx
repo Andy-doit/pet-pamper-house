@@ -46,8 +46,8 @@ const MainSlider = () => {
 
             <Slider {...settings}>
                 {ServiceCards.map((service, index) => (
-                    <div className="pb-3">
-                        <CardService key={index} {...service} />
+                    <div className="pb-3" key={index}>
+                        <CardService  {...service} />
                     </div>
 
                 ))}

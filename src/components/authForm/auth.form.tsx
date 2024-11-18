@@ -12,7 +12,7 @@ import {
     useDisclosure,
 } from "@nextui-org/react";
 import { useState } from "react";
-import { BiLock, BiMailSend, BiUser } from "react-icons/bi";
+import { BiMailSend, BiUser } from "react-icons/bi";
 import { BsEyeFill, BsEyeSlash } from "react-icons/bs";
 
 const LoginForm = () => {

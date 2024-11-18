@@ -12,7 +12,7 @@ interface IShop {
 
 export default function CardShop(props: IShop) {
   return (
-    <Card className="max-w-[320px] w-full">
+    <Card className="max-w-[320px] w-full" key={index}>
       <Divider />
       <CardHeader className="justify-between">
         <div className="flex flex-col sm:flex-row gap-3">

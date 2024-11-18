@@ -49,8 +49,8 @@ const ShopSlider = () => {
 
       <Slider {...settings}>
         {Shop.map((shopInfor, index) => (
-          <div className="pb-3">
-            <CardShop key={index} {...shopInfor} />
+          <div className="pb-3" key={index}>
+            <CardShop  {...shopInfor} />
           </div>
 
         ))}
