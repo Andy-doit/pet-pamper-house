@@ -17,8 +17,8 @@ const MainSlider = () => {
             {
                 breakpoint: 1024,
                 settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
                     infinite: true,
                     dots: true
                 }
@@ -26,8 +26,8 @@ const MainSlider = () => {
             {
                 breakpoint: 600,
                 settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
                     initialSlide: 2
                 }
             },
@@ -46,7 +46,10 @@ const MainSlider = () => {
 
             <Slider {...settings}>
                 {ServiceCards.map((service, index) => (
-                    <CardService key={index} {...service} />
+                    <div className="pb-3">
+                        <CardService key={index} {...service} />
+                    </div>
+
                 ))}
             </Slider>
         </div>

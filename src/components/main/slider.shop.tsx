@@ -11,15 +11,16 @@ const ShopSlider = () => {
     dots: true,
     infinite: false,
     speed: 500,
-    slidesToShow: 3,
+    fade: false,
+    slidesToShow: 4,
     slidesToScroll: 4,
     initialSlide: 0,
     responsive: [
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToShow: 2,
+          slidesToScroll: 2,
           infinite: true,
           dots: true
         }
@@ -27,8 +28,8 @@ const ShopSlider = () => {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesToShow: 1,
+          slidesToScroll: 3,
           initialSlide: 2
         }
       },
@@ -45,14 +46,16 @@ const ShopSlider = () => {
   return (
     <div className="slider-container py-4">
 
+
       <Slider {...settings}>
         {Shop.map((shopInfor, index) => (
-
-          <CardShop key={index} {...shopInfor} />
-
+          <div className="pb-3">
+            <CardShop key={index} {...shopInfor} />
+          </div>
 
         ))}
       </Slider>
+
     </div>
   )
 }

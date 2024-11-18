@@ -1,5 +1,6 @@
-'use client'
-import { Card, CardHeader, CardBody, Image } from "@nextui-org/react";
+'use client';
+import { Card, CardHeader, CardBody, Image, Divider, CardFooter } from "@nextui-org/react";
+import ServiceDetails from "../details/service.detail";
 
 interface IService {
     ServiceName: string;
@@ -11,7 +12,7 @@ interface IService {
 
 export default function CardService(props: IService) {
     return (
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-5">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5">
             <Card className="py-4 mt-4 w-full sm:w-[250px] md:w-[300px]">
                 <CardBody className="overflow-visible py-1">
                     <Image
@@ -22,20 +23,41 @@ export default function CardService(props: IService) {
                     />
                 </CardBody>
                 <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
-                    <p className="text-xl uppercase font-bold truncate w-full" title={props.ServiceName}>
+                    {/* Service Name */}
+                    <p
+                        className="text-xl uppercase font-bold truncate w-full"
+                        title={props.ServiceName} // Tooltip for full text
+                    >
                         {props.ServiceName}
                     </p>
-                    <small className="text-default-500 text-lg truncate w-full" title={props.company}>
+
+                    {/* Company */}
+                    <small
+                        className="text-default-500 text-lg truncate w-full"
+                        title={props.company}
+                    >
                         {props.company}
                     </small>
-                    <h4 className="font-bold text-base truncate w-full" title={props.address}>
+
+                    {/* Address */}
+                    <h4
+                        className="font-bold text-base truncate w-full"
+                        title={props.address}
+                    >
                         {props.address}
                     </h4>
-                    {/* <div className="flex">
-                        <Rate className="flex" value={Number(service.rate)} />
-                    </div> */}
-                    <p className="text-lg mt-2 font-semibold">Giá: {props.price}</p>
+
+                    {/* Price */}
+                    <p className="text-lg mt-2 font-semibold">
+                        Giá: {props.price}
+                    </p>
                 </CardHeader>
+                <Divider />
+                <CardFooter>
+                    <div className="w-full">
+                        <ServiceDetails />
+                    </div>
+                </CardFooter>
             </Card>
         </div>
     );

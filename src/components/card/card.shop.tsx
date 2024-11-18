@@ -1,3 +1,4 @@
+'use client'
 import React from "react";
 import { Card, CardHeader, CardFooter, Avatar, Divider } from "@nextui-org/react";
 import Link from "next/link";
@@ -11,42 +12,55 @@ interface IShop {
 
 export default function CardShop(props: IShop) {
   return (
-    <Card className="max-w-[400px] w-full sm:max-w-[300px] md:max-w-[400px]">
+    <Card className="max-w-[320px] w-full">
       <Divider />
       <CardHeader className="justify-between">
-        <div className="flex flex-col sm:flex-row gap-4">
+        <div className="flex flex-col sm:flex-row gap-3">
           <div className="flex justify-center">
             <Link href="/">
               <Avatar
                 radius="full"
                 src="https://nextui.org/avatars/avatar-1.png"
-                className="w-20 h-20 sm:w-24 sm:h-24"
+                className="w-16 h-16 sm:w-20 sm:h-20"
               />
             </Link>
           </div>
           <div className="flex flex-col gap-1 items-start justify-center">
             <Link
               href="/"
-              className="text-xl md:text-2xl font-semibold leading-none text-default-600 truncate"
-              style={{ maxWidth: '100%' }}
+              className="text-lg font-semibold leading-none text-default-600 truncate"
+              style={{
+                maxWidth: '100%',
+                textOverflow: 'ellipsis',
+                overflow: 'hidden',
+                whiteSpace: 'nowrap',
+              }}
             >
               {props.company}
             </Link>
-            <h5 className="text-sm md:text-base tracking-tight text-default-400 truncate" style={{ maxWidth: '100%' }}>
+            <h5
+              className="text-sm text-default-400 truncate"
+              style={{
+                maxWidth: '100%',
+                textOverflow: 'ellipsis',
+                overflow: 'hidden',
+                whiteSpace: 'nowrap',
+              }}
+            >
               {props.address}
             </h5>
           </div>
         </div>
       </CardHeader>
       <Divider />
-      <CardFooter className="gap-3 flex flex-col sm:flex-row justify-around">
-        <div className="flex gap-1">
-          <p className="font-semibold text-default-400 text-sm md:text-base truncate">{props.rate}</p>
-          <p className="text-default-400 text-sm md:text-base">lượt đánh giá</p>
+      <CardFooter className="gap-2 flex flex-col sm:flex-row justify-around">
+        <div className="flex gap-1 items-center">
+          <p className="font-semibold text-default-400 text-sm truncate">{props.rate}</p>
+          <p className="text-default-400 text-sm">lượt đánh giá</p>
         </div>
-        <div className="flex gap-1">
-          <p className="font-semibold text-default-400 text-sm md:text-base truncate">{props.order}</p>
-          <p className="text-default-400 text-sm md:text-base">lượt đặt hàng</p>
+        <div className="flex gap-1 items-center">
+          <p className="font-semibold text-default-400 text-sm truncate">{props.order}</p>
+          <p className="text-default-400 text-sm">lượt đặt hàng</p>
         </div>
       </CardFooter>
     </Card>

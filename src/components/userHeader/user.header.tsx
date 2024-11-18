@@ -18,6 +18,7 @@ import {
 } from "@nextui-org/react";
 import Image from 'next/image'
 import LogoApp from "../../../public/assets/images/Logo.svg";
+import LoginForm from "../authForm/auth.form";
 
 export default function UserHeader() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -99,9 +100,7 @@ export default function UserHeader() {
                             </Button>
                         </NavbarItem>
                         <NavbarItem>
-                            <Button size="sm" as={Link} href="#" className="bg-gradient-to-tr from-pink-500 to-yellow-500 text-white shadow-lg" variant="flat">
-                                Đăng nhập
-                            </Button>
+                            <LoginForm />
                         </NavbarItem>
                     </>
 
