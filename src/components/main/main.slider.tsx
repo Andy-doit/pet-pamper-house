@@ -46,7 +46,7 @@ const MainSlider = () => {
 
             <Slider {...settings}>
                 {ServiceCards.map((service, index) => (
-                    <div className="pb-3">
+                    <div className="pb-3" key={index}>
                         <CardService key={index} {...service} />
                     </div>
 
