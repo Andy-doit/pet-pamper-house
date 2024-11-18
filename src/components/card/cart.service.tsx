@@ -13,8 +13,8 @@ interface IService {
 
 export default function CardService(props: IService) {
     return (
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5">
-            <Card className="py-4 mt-4 w-full sm:w-[250px] md:w-[300px]" key={props.index}>
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5" key={props.index}>
+            <Card className="py-4 mt-4 w-full sm:w-[250px] md:w-[300px]" >
                 <CardBody className="overflow-visible py-1" >
                     <Image
                         alt="Card background"
